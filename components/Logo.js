@@ -17,18 +17,18 @@ export default function Logo({navigation}){
                     <Text  style={{backgroundColor:"green",textAlign:"center",padding:12,fontSize:21,color:"white",fontWeight:"500",borderRadius:40}} onPress={() => navigation.navigate('Login')}>Login</Text>
                 </View>
                 <View style={{padding:10}}>
-                    <Text style={styles.btn}  onPress={() => navigation.navigate('Register') }> Register</Text>
+                    <Text style={styles.btn}  onPress={() => navigation.navigate('Login') }> Register</Text>
             
-                    <Text style={styles.btn}  onPress={() => navigation.navigate('Register') }>Sign-in using Google</Text>
+                    <Text style={styles.btn}  onPress={() => navigation.navigate('Login') }>Sign-in using Google</Text>
             
-                    <Text style={styles.btn}  onPress={() => navigation.navigate('Register') }>Sign-in using Facebook</Text>
+                    <Text style={styles.btn}  onPress={() => navigation.navigate('Login') }>Sign-in using Facebook</Text>
             
-                    <Text style={styles.btn}  onPress={() => navigation.navigate('Register') }>Sign-in using Linkedin</Text>
+                    <Text style={styles.btn}  onPress={() => navigation.navigate('Login') }>Sign-in using Linkedin</Text>
                 </View>
                 <View style={{flexDirection:"row",padding:20,marginTop:20}}>
                     <Text style={{textAlign:"center",fontWeight:"500",fontSize:18}} >Don't have an account? </Text>
-                    <View style={{alignItems:"flex-end",justifyContent:"flex-end",flex:1}}>
-                        <Text style={{fontWeight:"500",fontSize:18,color:"green"}}>Sign up Now!</Text>
+                    <View style={{alignItems:"flex-end",justifyContent:"flex-end"}}>
+                        <Text style={{fontWeight:"500",fontSize:18,color:"green"}} onPress={()=>navigation.navigate('Register')}>Sign up Now!</Text>
                     </View>
                     
                 </View>

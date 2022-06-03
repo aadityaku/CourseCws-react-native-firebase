@@ -13,6 +13,7 @@ export default function Login({navigation}){
 
     async function signInWithPhoneNumber(phoneNumber) {
         console.log(phoneNumber)
+        const no = '+91'+phoneNumber;
         const confirmation = await auth().signInWithPhoneNumber(phoneNumber);
         console.log(confirmation)
         setConfirm(confirmation)
@@ -22,7 +23,7 @@ export default function Login({navigation}){
         console.log(code)
         try {
           await confirm.confirm(code);
-          navigation.navigate("Course")
+          navigation.navigate("Register")
         } catch (error) {
           console.log('Invalid code.');
         }
@@ -60,10 +61,10 @@ export default function Login({navigation}){
                       {!sent && <Text style={styles.btn}   title='Sent OTP' onPress={() => HandleLogin()}>Sent Otp</Text>}
                       {sent && <Text style={styles.btn} onPress={() => confirmCode()}>Verify</Text>}
 
-                  <View style={{flexGrow:1,flexDirection:"row",marginTop:7,padding:5}}>
+                  {/* <View style={{flexGrow:1,flexDirection:"row",marginTop:7,padding:5}}>
                       <View style={{flexGrow:1}}><Text style={{fontWeight:"500",fontSize:18,color:"red"}}>Forgot Password?</Text></View>
                       <View><Text style={{fontWeight:"500",fontSize:18,color:"green"}}>Register?New!</Text></View>
-                  </View>
+                  </View> */}
                   </View>
                  </View>
            </View>
